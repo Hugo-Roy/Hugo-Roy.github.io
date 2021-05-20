@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+@import 'src/styles/mixins';
+
+.nav{
+  width: 45%;
+  margin-left: 1.5em;
+
+  &__list{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    &__item{
+      padding: 25px;
+      font-size: vars.$navItemsSize * 1.2;
+      color: vars.$elementsColor;
+      transition: 0.2s;
+    }
+
+    &__item:hover{
+      color: vars.$accentColor;
+      transition: 0.2s;
+      transform: scale(1.1) !important;
+    }
+  }
+}

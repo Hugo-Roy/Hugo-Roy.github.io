@@ -1,7 +1,9 @@
 @use 'reset';
 @use 'vars';
+@import 'mixins';
 
 body {
+  box-sizing: border-box;
   font-family: vars.$mainFont, sans-serif;
   background: vars.$backgroundColor;
 }
