@@ -1,0 +1,17 @@
+@use 'src/styles/vars';
+@import 'src/styles/mixins';
+
+.footer{
+
+  &__list{
+
+    &__item{
+
+      &__link{
+        color: vars.$elementsColor;
+      }
+
+
+    }
+  }
+}

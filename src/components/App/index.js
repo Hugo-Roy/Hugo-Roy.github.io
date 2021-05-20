@@ -8,6 +8,8 @@ import {
 // == Import
 import './styles.scss';
 import Navbar from 'src/components/Navbar';
+import Home from 'src/components/Home';
+import Footer from 'src/components/Footer';
 
 // == Composant
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
   return (
     <div className="app">
       <Navbar clicked={clicked} setClicked={setClicked} />
+      <Home />
+      <Footer />
     </div>
   );
 };
