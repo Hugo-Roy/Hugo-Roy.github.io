@@ -1,26 +1,85 @@
 @use 'src/styles/vars';
 @import 'src/styles/mixins';
 
-.nav{
-  width: 45%;
-  margin-left: 1.5em;
+.header{
 
-  &__list{
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  &__toggle{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
 
-    &__item{
-      padding: 25px;
-      font-size: vars.$navItemsSize * 1.2;
-      color: vars.$elementsColor;
-      transition: 0.2s;
+    @include small-only{
+      display: block;
     }
 
-    &__item:hover{
-      color: vars.$accentColor;
-      transition: 0.2s;
-      transform: scale(1.1) !important;
+    &__hamburger{
+      width: 40px;
+      margin-top: 1rem;
+      margin-right: 1rem;
     }
+  }
+
+  &__nav{
+    width: 45%;
+    margin: vars.$gutter 0 0 vars.$gutter;
+
+    @include small-only{
+      width: 100%;
+      height: 0;
+      margin: 1rem auto;
+      overflow: hidden;
+      opacity: 0;
+      transition: .2s ease-in-out;
+    }
+
+    @include medium{
+      width: 85%;
+      margin: vars.$gutter auto;
+    }
+
+    @include large{
+      width: 45%;
+      margin: vars.$gutter 0 0 vars.$gutter * 2;
+    }
+
+    @include extra-large{
+      width: 45%;
+      margin: vars.$gutter 0 0 vars.$gutter;
+    }
+
+    &__list{
+      display: flex;
+      justify-content: center;
+
+      @include small-only{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      &__item{
+        padding: 25px;
+        font-size: vars.$navItemsSize * 1.2;
+        color: vars.$elementsColor;
+        transition: 0.2s;
+
+        @include small-only{
+          padding: 20px;
+          font-size: vars.$navItemsSize;
+        }
+      }
+
+      &__item:hover{
+        color: vars.$accentColor;
+        transition: 0.2s;
+        transform: scale(1.1) !important;
+      }
+    }
+  }
+
+  &__nav__open{
+    height: 100%;
+    opacity: 1;
+    transition: .2s ease-in-out;
   }
 }
