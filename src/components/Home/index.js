@@ -8,7 +8,7 @@ const Home = () => (
     <div className="main__container">
       <motion.h1
         className="main__container__title"
-        initial={{ x: 500 }}
+        initial={{ x: 1500 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.6 }}
       >Bonjour! <br /> Je suis Hugo, <br /> développeur web
