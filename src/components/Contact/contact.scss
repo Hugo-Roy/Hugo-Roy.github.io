@@ -1,0 +1,146 @@
+@use 'src/styles/vars';
+@import 'src/styles/mixins';
+
+.main{
+  width: 85%;
+  height: 55%;
+  margin: vars.$gutter * 2 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__title{
+    margin-right: vars.$gutter * 6;
+    color: vars.$elementsColor;
+    font-size: 3rem;
+  }
+
+  &__form{
+    width: 55%;
+    height: 55%;
+    margin: vars.$gutter auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__up{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__left{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        &__label{
+          color: vars.$elementsColor;
+          font-size: 1.5rem;
+          margin-bottom: vars.$gutter / 2;
+          cursor: default;
+        }
+
+        &__input{
+          padding: 10px;
+          width: auto;
+          background-color: transparent;
+          border: 2px solid vars.$elementsColor;
+          border-radius: 3px;
+          color: vars.$elementsColor;
+          font-family: vars.$mainFont;
+          transition: 0.2s;
+        }
+
+        &__input:focus{
+          border: 2px solid vars.$accentColor;
+          transform: scale(1.05);
+          transition: 0.2s;
+        }
+      }
+
+      &__right{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        &__label{
+          color: vars.$elementsColor;
+          font-size: 1.5rem;
+          margin-bottom: vars.$gutter / 2;
+          cursor: default;
+        }
+
+        &__input{
+          padding: 10px;
+          background-color: transparent;
+          border: 2px solid vars.$elementsColor;
+          border-radius: 3px;
+          color: vars.$elementsColor;
+          font-family: vars.$mainFont;
+          transition: 0.2s;
+        }
+
+        &__input:focus{
+          border: 2px solid vars.$accentColor;
+          transform: scale(1.05);
+          transition: 0.2s;
+        }
+      }
+    }
+
+    &__down{
+      margin-top: vars.$gutter;
+      display: flex;
+      flex-direction: column;
+
+      &__label{
+        color: vars.$elementsColor;
+        font-size: 1.5rem;
+        margin-bottom: vars.$gutter / 2;
+        cursor: default;
+      }
+
+      &__message{
+        padding: 10px;
+        width: auto;
+        background-color: transparent;
+        border: 2px solid vars.$elementsColor;
+        border-radius: 3px;
+        color: vars.$elementsColor;
+        font-family: vars.$mainFont;
+        min-width: 50%;
+        max-width: 100%;
+        min-height: 100px;
+        max-height: 150px;
+        transition: 0.2s;
+      }
+
+      &__message:focus{
+        border: 2px solid vars.$accentColor;
+        transform: scale(1.05);
+        transition: 0.2s;
+      }
+    }
+
+    &__button{
+      width: 35%;
+      padding: 10px;
+      border: 2px solid vars.$elementsColor;
+      border-radius: 3px;
+      margin: vars.$gutter * 2 auto;
+      font-family: vars.$mainFont;
+      font-size: 1rem;
+      color: vars.$elementsColor;
+      background-color: transparent;
+      transition: 0.2s;
+    }
+
+    &__button:hover{
+      border: 2px solid vars.$accentColor;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+  }
+}

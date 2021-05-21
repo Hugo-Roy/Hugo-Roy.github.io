@@ -10,12 +10,13 @@ import {
 import './styles.scss';
 import Navbar from 'src/components/Navbar';
 import Home from 'src/components/Home';
-import Contact from 'src/components/Contact';
+import Contact from 'src/containers/Contact';
 import Footer from 'src/components/Footer';
 
 // == Composant
 const App = () => {
   const [clicked, setClicked] = useState(false);
+  const [value, setValue] = useState('');
   const location = useLocation();
 
   return (
@@ -35,7 +36,7 @@ const App = () => {
           exact
           path="/contact"
         >
-          <Contact />
+          <Contact value={value} setValue={setValue} />
         </Route>
       </Switch>
       <Footer />
