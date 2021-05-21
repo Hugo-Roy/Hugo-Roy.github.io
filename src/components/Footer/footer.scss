@@ -2,16 +2,28 @@
 @import 'src/styles/mixins';
 
 .footer{
-
+  width: 85%;
+  margin: vars.$gutter * 2 auto;
   &__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     &__item{
+      font-size: vars.$navItemsSize * 1.5;
+      color: vars.$elementsColor;
+      padding: 25px;
 
       &__link{
         color: vars.$elementsColor;
+        transition: .2s;
       }
 
-
+      &__link:hover{
+        color: vars.$accentColor;
+        transition: .2s;
+        font-size: vars.$navItemsSize * 1.05;
+      }
     }
   }
 }
