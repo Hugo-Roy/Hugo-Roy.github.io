@@ -4,15 +4,24 @@
 .footer{
   width: 85%;
   margin: vars.$gutter * 2 auto;
+
   &__list{
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     &__item{
-      font-size: vars.$navItemsSize * 1.5;
+      font-size: vars.$navItemsSize * 2;
       color: vars.$elementsColor;
       padding: 25px;
+
+      @include medium{
+        font-size: vars.$navItemsSize * 2.2;
+      }
+
+      @include large{
+        font-size: vars.$navItemsSize * 2.5;
+      }
 
       &__link{
         color: vars.$elementsColor;
@@ -22,7 +31,7 @@
       &__link:hover{
         color: vars.$accentColor;
         transition: .2s;
-        font-size: vars.$navItemsSize * 1.05;
+        font-size: vars.$navItemsSize;
       }
     }
   }

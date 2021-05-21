@@ -3,10 +3,9 @@
 
 .main{
   width: 85%;
-  margin: auto;
+  margin: 0 auto 50px auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 
   @include very-small{
     margin: vars.$gutter * 2 auto 0 auto;
@@ -16,16 +15,21 @@
     margin: 0 auto;
   }
 
+  @include medium{
+    width: 100%;
+    margin: vars.$gutter 0;
+  }
+
   &__container{
     width: 100%;
 
     &__title{
       width: 60%;
-      margin: vars.$gutter 0 0 auto;
+      margin: vars.$gutter / 2 0 0 auto;
       font-size: 5em;
       color: vars.$elementsColor;
       text-align: right;
-      line-height: 100px;
+      line-height: 90px;
       position: relative;
 
       @include very-small{
@@ -41,6 +45,20 @@
         margin: vars.$gutter auto vars.$gutter / 3 auto;
         font-size: 3.2em;
         text-align: center;
+        line-height: normal;
+      }
+
+      @include medium{
+        width: 80%;
+        margin: vars.$gutter auto vars.$gutter / 3 auto;
+        font-size: 3.5em;
+        line-height: normal;
+      }
+
+      @include large{
+        width: 90%;
+        margin: vars.$gutter * 2 auto vars.$gutter auto;
+        font-size: 5em;
         line-height: normal;
       }
     }
@@ -72,6 +90,20 @@
       top: -100px;
       right: 50%;
     }
+
+    @include medium{
+      width: 700px;
+      height: 700px;
+      top: -400px;
+      left: -400px;
+    }
+
+    @include large{
+      width: 800px;
+      height: 800px;
+      top: -400px;
+      left: -400px;
+    }
   }
 
   &__container::after{
@@ -99,11 +131,25 @@
       top: -250px;
       right: 40%;
     }
+
+    @include medium{
+      width: 800px;
+      height: 800px;
+      top: -400px;
+      left: -400px;
+    }
+
+    @include large{
+      width: 900px;
+      height: 900px;
+      top: -400px;
+      left: -400px;
+    }
   }
 
   &__left{
-    width: 80%;
-    margin-top: vars.$gutter * 3;
+    width: 60%;
+    margin-top: vars.$gutter * 2;
     color: vars.$elementsColor;
     font-size: 1.5rem;
 
@@ -116,6 +162,30 @@
     @include small-only{
       width: 95%;
       text-align: center;
+    }
+
+    @include medium{
+      width: 70%;
+      margin: vars.$gutter * 2 0 vars.$gutter vars.$gutter;
+    }
+
+    @include large{
+      width: 85%;
+      margin: vars.$gutter * 2 0 vars.$gutter vars.$gutter;
+      font-size: 1.8em;
+    }
+
+    &__text{
+      line-height: 30px;
+
+      @include medium{
+        margin-left: vars.$gutter;
+        line-height: 30px;
+      }
+
+      @include large{
+        line-height: 35px;
+      }
     }
   }
 }

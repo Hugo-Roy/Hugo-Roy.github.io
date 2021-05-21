@@ -4,12 +4,13 @@
 .header{
 
   &__toggle{
-    position: absolute;
+    position: relative;
     top: 1.5rem;
-    right: 1rem;
+    right: -18rem;
     display: none;
 
     @include very-small{
+      right: -17rem;
       display: block;
     }
 
@@ -47,8 +48,8 @@
     }
 
     @include medium{
-      width: 85%;
-      margin: vars.$gutter auto;
+      width: 75%;
+      margin: vars.$gutter * 2 0;
     }
 
     @include large{
@@ -79,6 +80,7 @@
         padding: 25px;
         font-size: vars.$navItemsSize * 1.2;
         color: vars.$elementsColor;
+        list-style: none;
         transition: 0.2s;
 
         @include very-small{
