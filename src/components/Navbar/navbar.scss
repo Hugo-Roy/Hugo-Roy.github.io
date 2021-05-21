@@ -9,6 +9,10 @@
     right: 1rem;
     display: none;
 
+    @include very-small{
+      display: block;
+    }
+
     @include small-only{
       display: block;
     }
@@ -23,6 +27,15 @@
   &__nav{
     width: 45%;
     margin: vars.$gutter 0 0 vars.$gutter;
+
+    @include very-small{
+      width: 100%;
+      height: 0;
+      margin: 1rem auto;
+      overflow: hidden;
+      opacity: 0;
+      transition: .2s ease-in-out;
+    }
 
     @include small-only{
       width: 100%;
@@ -52,6 +65,11 @@
       display: flex;
       justify-content: center;
 
+      @include very-small{
+        flex-direction: column;
+        text-align: center;
+      }
+
       @include small-only{
         flex-direction: column;
         text-align: center;
@@ -62,6 +80,12 @@
         font-size: vars.$navItemsSize * 1.2;
         color: vars.$elementsColor;
         transition: 0.2s;
+
+        @include very-small{
+          padding: 15px;
+          font-size: vars.$navItemsSize;
+          transition: 0.2s;
+        }
 
         @include small-only{
           padding: 20px;
@@ -81,5 +105,13 @@
     height: 100%;
     opacity: 1;
     transition: .2s ease-in-out;
+
+    @include very-small{
+      margin-bottom: 0;
+    }
+
+    @include small-only{
+      margin-bottom: 0;
+    }
   }
 }

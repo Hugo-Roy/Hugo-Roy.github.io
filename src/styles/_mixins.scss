@@ -1,7 +1,13 @@
 // Mixins
 
+@mixin very-small{
+  @media (max-width: 374px){
+    @content;
+  }
+}
+
 @mixin small-only{
-  @media (max-width: 599px){
+  @media (min-width:375px) and (max-width: 599px){
     @content;
   }
 }

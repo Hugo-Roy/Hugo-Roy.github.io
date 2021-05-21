@@ -8,6 +8,14 @@
   flex-direction: column;
   justify-content: space-around;
 
+  @include very-small{
+    margin: vars.$gutter * 2 auto 0 auto;
+  }
+
+  @include small-only{
+    margin: 0 auto;
+  }
+
   &__container{
     width: 100%;
 
@@ -17,9 +25,24 @@
       font-size: 5em;
       color: vars.$elementsColor;
       text-align: right;
-      text-align-last: right;
       line-height: 100px;
       position: relative;
+
+      @include very-small{
+        width: 100%;
+        margin: vars.$gutter auto vars.$gutter / 3 auto;
+        font-size: 2.5em;
+        text-align: center;
+        line-height: normal;
+      }
+
+      @include small-only{
+        width: 100%;
+        margin: vars.$gutter auto vars.$gutter / 3 auto;
+        font-size: 3.2em;
+        text-align: center;
+        line-height: normal;
+      }
     }
   }
 
@@ -35,6 +58,20 @@
     transform: rotateZ(90deg);
     background-color: vars.$accentColor;
     animation: roll 15s ease-in-out infinite;
+
+    @include very-small{
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: 50%;
+    }
+
+    @include small-only{
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: 50%;
+    }
   }
 
   &__container::after{
@@ -48,6 +85,20 @@
     z-index: -2;
     background-color: vars.$altColor;
     animation: roll 20s ease-in-out infinite;
+
+    @include very-small{
+      width: 500px;
+      height: 500px;
+      top: -250px;
+      right: 40%;
+    }
+
+    @include small-only{
+      width: 500px;
+      height: 500px;
+      top: -250px;
+      right: 40%;
+    }
   }
 
   &__left{
@@ -55,6 +106,17 @@
     margin-top: vars.$gutter * 3;
     color: vars.$elementsColor;
     font-size: 1.5rem;
+
+    @include very-small{
+      width: 100%;
+      text-align: center;
+      margin-top: vars.$gutter * 2;
+    }
+
+    @include small-only{
+      width: 95%;
+      text-align: center;
+    }
   }
 }
 
