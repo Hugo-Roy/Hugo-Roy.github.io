@@ -8,7 +8,11 @@
 
   @include medium{
     width: 100%;
-    overflow-y: hidden;
+    overflow-y: scroll;
+  }
+
+  @include large{
+    overflow-y: scroll;
   }
 }
 

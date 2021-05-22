@@ -7,6 +7,28 @@
   position: absolute;
   bottom: 0;
 
+  @include very-small{
+    position: initial;
+    margin-top: vars.$gutter * 5;
+  }
+
+  @include small-only{
+    position: initial;
+    margin-top: vars.$gutter * 5;
+  }
+
+  @include medium{
+    position: initial;
+    margin-top: vars.$gutter;
+    margin-bottom: 0;
+  }
+
+  @include large{
+    position: initial;
+    margin-top: vars.$gutter;
+    margin-bottom: 0;
+  }
+
   &__list{
     display: flex;
     flex-direction: row;

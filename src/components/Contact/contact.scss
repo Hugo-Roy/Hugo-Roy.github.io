@@ -18,11 +18,11 @@
   @include small-only{
     width: 100%;
     height: auto;
-    margin: vars.$gutter * 2 auto 0 auto;
+    margin: vars.$gutter * 2 auto -5em auto;
   }
 
   @include medium{
-    margin: vars.$gutter * 3 auto;
+    margin: vars.$gutter * 3 auto -1em auto;
   }
 
   &__title{

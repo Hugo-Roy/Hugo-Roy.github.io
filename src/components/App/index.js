@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import {
   Switch,
   Route,
-  Link,
   useLocation,
 } from 'react-router-dom';
 // == Import
 import './styles.scss';
 import Navbar from 'src/components/Navbar';
 import Home from 'src/components/Home';
+import Portfolio from 'src/components/Portfolio';
 import Contact from 'src/containers/Contact';
 import Footer from 'src/components/Footer';
 import { AnimatePresence } from 'framer-motion';
@@ -39,6 +39,12 @@ const App = () => {
             path="/contact"
           >
             <Contact value={value} setValue={setValue} />
+          </Route>
+          <Route
+            exact
+            path="/portfolio"
+          >
+            <Portfolio />
           </Route>
         </Switch>
       </AnimatePresence>
