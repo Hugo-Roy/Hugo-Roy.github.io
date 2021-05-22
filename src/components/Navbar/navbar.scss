@@ -6,11 +6,10 @@
   &__toggle{
     position: relative;
     top: 1.5rem;
-    right: -18rem;
+    left: 16rem;
     display: none;
 
     @include very-small{
-      right: -17rem;
       display: block;
     }
 

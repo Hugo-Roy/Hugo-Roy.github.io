@@ -7,6 +7,7 @@ import './contact.scss';
 import Name from 'src/containers/Contact/Name';
 import Mail from 'src/containers/Contact/Mail';
 import Message from 'src/containers/Contact/Message';
+import { motion } from 'framer-motion';
 
 const Contact = ({ clearForm }) => {
   const handleSubmit = (event) => {
@@ -27,7 +28,14 @@ const Contact = ({ clearForm }) => {
 
   return (
     <main className="main">
-      <h2 className="main__title">Pour me contacter:</h2>
+      <motion.h2
+        className="main__title"
+        initial={{ x: 1500 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        Pour me contacter:
+      </motion.h2>
       <form
         className="main__form"
         onSubmit={handleSubmit}
@@ -37,12 +45,15 @@ const Contact = ({ clearForm }) => {
           <Mail />
         </div>
         <Message />
-        <button
+        <motion.button
           type="submit"
           className="main__form__button"
+          initial={{ x: 1500 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
         >
           Envoyer
-        </button>
+        </motion.button>
       </form>
     </main>
   );

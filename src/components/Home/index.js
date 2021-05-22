@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 import './home.scss';
 
 const Home = () => (
-  <main className="main">
-    <div className="main__container">
+  <main className="man">
+    <div className="man__container">
       <motion.h1
-        className="main__container__title"
+        className="man__container__title"
         initial={{ x: 1500 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.6 }}
       >Bonjour! <br /> Je suis Hugo, <br /> développeur web
       </motion.h1>
     </div>
-    <div className="main__left">
+    <div className="man__left">
       <motion.p
-        className="main__left__text"
+        className="man__left__text"
         initial={{ x: -1500 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8 }}

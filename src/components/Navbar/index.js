@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,20 +9,23 @@ import classNames from 'classnames';
 
 const Navbar = ({ clicked, setClicked }) => {
   const cssClass = classNames('header__nav', { header__nav__open: clicked });
-
+  const hamb = useRef();
   const rotate = (clicked ? '180deg' : '90deg');
+  const switchNav = () => {
+    hamb.current.style.rotate = rotate;
+    hamb.current.style.transition = '0.2s';
+    setClicked((clicked) => !clicked);
+  };
 
   return (
     <header className="header">
       <div className="header__toggle">
         <motion.img
+          ref={hamb}
           src={hamburger}
           alt="hamburger menu"
           className="header__toggle__hamburger"
-          onClick={(event) => {
-            setClicked((clicked) => !clicked);
-            event.target.style.rotate = rotate;
-          }}
+          onClick={switchNav}
         />
       </div>
       <nav className={cssClass}>
@@ -33,7 +36,13 @@ const Navbar = ({ clicked, setClicked }) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <NavLink to="/portfolio" className="header__nav__list__item__link">Portfolio</NavLink>
+            <NavLink
+              to="/portfolio"
+              className="header__nav__list__item__link"
+              onClick={switchNav}
+            >
+              Portfolio
+            </NavLink>
           </motion.li>
           <motion.li
             className="header__nav__list__item"
@@ -41,7 +50,13 @@ const Navbar = ({ clicked, setClicked }) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <NavLink to="/" className="header__nav__list__item__link">Home</NavLink>
+            <NavLink
+              to="/"
+              className="header__nav__list__item__link"
+              onClick={switchNav}
+            >
+              Home
+            </NavLink>
           </motion.li>
           <motion.li
             className="header__nav__list__item"
@@ -49,7 +64,13 @@ const Navbar = ({ clicked, setClicked }) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <NavLink to="/contact" className="header__nav__list__item__link">Contact</NavLink>
+            <NavLink
+              to="/contact"
+              className="header__nav__list__item__link"
+              onClick={switchNav}
+            >
+              Contact
+            </NavLink>
           </motion.li>
         </ul>
       </nav>

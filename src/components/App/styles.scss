@@ -4,6 +4,7 @@
 .app {
   width: 100%;
   height: 100vh;
+  position: relative;
 
   @include medium{
     width: 100%;

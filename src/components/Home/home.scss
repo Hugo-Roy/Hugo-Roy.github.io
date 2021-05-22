@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 @import 'src/styles/mixins';
 
-.main{
+.man{
   width: 85%;
   margin: 0 auto 50px auto;
   display: flex;
@@ -30,7 +30,6 @@
       color: vars.$elementsColor;
       text-align: right;
       line-height: 90px;
-      position: relative;
 
       @include very-small{
         width: 100%;
