@@ -12,6 +12,7 @@ import Navbar from 'src/components/Navbar';
 import Home from 'src/components/Home';
 import Contact from 'src/containers/Contact';
 import Footer from 'src/components/Footer';
+import { AnimatePresence } from 'framer-motion';
 
 // == Composant
 const App = () => {
@@ -22,23 +23,25 @@ const App = () => {
   return (
     <div className="app">
       <Navbar clicked={clicked} setClicked={setClicked} />
-      <Switch
-        location={location}
-        key={location.key}
-      >
-        <Route
-          exact
-          path="/"
+      <AnimatePresence exitBeforeEnter>
+        <Switch
+          location={location}
+          key={location.key}
         >
-          <Home />
-        </Route>
-        <Route
-          exact
-          path="/contact"
-        >
-          <Contact value={value} setValue={setValue} />
-        </Route>
-      </Switch>
+          <Route
+            exact
+            path="/"
+          >
+            <Home />
+          </Route>
+          <Route
+            exact
+            path="/contact"
+          >
+            <Contact value={value} setValue={setValue} />
+          </Route>
+        </Switch>
+      </AnimatePresence>
       <Footer />
     </div>
   );

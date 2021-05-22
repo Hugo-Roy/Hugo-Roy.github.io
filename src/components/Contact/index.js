@@ -26,13 +26,24 @@ const Contact = ({ clearForm }) => {
       });
   };
 
+  const contactVariants = {
+    exit: {
+      x: 1500,
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
+
   return (
     <main className="main">
       <motion.h2
         className="main__title"
+        variants={contactVariants}
         initial={{ x: 1500 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.4 }}
+        exit="exit"
       >
         Pour me contacter:
       </motion.h2>
@@ -48,9 +59,11 @@ const Contact = ({ clearForm }) => {
         <motion.button
           type="submit"
           className="main__form__button"
+          variants={contactVariants}
           initial={{ x: 1500 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
+          exit="exit"
         >
           Envoyer
         </motion.button>

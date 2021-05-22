@@ -2,8 +2,10 @@
 @import 'src/styles/mixins';
 
 .footer{
-  width: 85%;
-  margin: 0 auto;
+  width: 100%;
+  margin: vars.$gutter * 2 auto;
+  position: absolute;
+  bottom: 0;
 
   &__list{
     display: flex;

@@ -8,18 +8,20 @@ const Home = () => (
     <div className="man__container">
       <motion.h1
         className="man__container__title"
-        initial={{ x: 1500 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        exit={{ opacity: 0 }}
       >Bonjour! <br /> Je suis Hugo, <br /> développeur web
       </motion.h1>
     </div>
     <div className="man__left">
       <motion.p
         className="man__left__text"
-        initial={{ x: -1500 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        exit={{ opacity: 0 }}
       >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       </motion.p>
     </div>

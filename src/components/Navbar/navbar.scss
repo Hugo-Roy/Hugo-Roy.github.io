@@ -15,6 +15,8 @@
 
     @include small-only{
       display: block;
+      top: 1.5rem;
+      left: 20rem;
     }
 
     &__hamburger{
