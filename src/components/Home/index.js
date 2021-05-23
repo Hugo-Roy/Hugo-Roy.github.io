@@ -22,7 +22,8 @@ const Home = () => (
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         exit={{ opacity: 0 }}
-      >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      >
+        Après avoir appris le métier de développeur web à l'école <a className="man__left__text__a" href="https://oclock.io/">O'Clock</a>, je suis maintenant à la recherche d'un poste de développeur front-end! Je suis motivé, curieux et passionné. Je n'attends qu'intégrer votre entreprise pour créer, améliorer, développer.
       </motion.p>
     </div>
   </main>

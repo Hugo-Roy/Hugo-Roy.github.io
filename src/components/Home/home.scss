@@ -102,6 +102,16 @@
       @include large{
         line-height: 35px;
       }
+
+      &__a{
+        text-decoration: underline;
+        transition: 0.2s;
+      }
+
+      &__a:hover{
+        color: vars.$accentColor;
+        transition: 0.2s;
+      }
     }
   }
 }

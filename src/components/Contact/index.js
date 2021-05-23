@@ -30,7 +30,7 @@ const Contact = ({ clearForm }) => {
     exit: {
       x: 1500,
       transition: {
-        duration: 0.3,
+        duration: 0.5,
       },
     },
   };

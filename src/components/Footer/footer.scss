@@ -3,7 +3,8 @@
 
 .footer{
   width: 100%;
-  margin: vars.$gutter * 2 auto;
+  height: 150px;
+  margin: vars.$gutter auto 10px auto;
   position: absolute;
   bottom: 0;
 
@@ -31,13 +32,13 @@
 
   &__list{
     display: flex;
-    flex-direction: row;
     justify-content: center;
 
     &__item{
       font-size: vars.$navItemsSize * 2;
       color: vars.$elementsColor;
-      padding: 25px;
+      padding: 20px;
+
 
       @include medium{
         font-size: vars.$navItemsSize * 2.2;
@@ -50,12 +51,14 @@
       &__link{
         color: vars.$elementsColor;
         transition: .2s;
+        margin: 0 20px;
       }
 
       &__link:hover{
         color: vars.$accentColor;
+        margin: 13px;
         transition: .2s;
-        font-size: vars.$navItemsSize * 1.05;
+        font-size: vars.$navItemsSize * 0.9;
       }
     }
   }
