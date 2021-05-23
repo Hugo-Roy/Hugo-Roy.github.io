@@ -12,6 +12,7 @@ import Home from 'src/components/Home';
 import Portfolio from 'src/components/Portfolio';
 import Contact from 'src/containers/Contact';
 import Footer from 'src/components/Footer';
+import NoMatch from 'src/components/NoMatch';
 import { AnimatePresence } from 'framer-motion';
 
 // == Composant
@@ -45,6 +46,11 @@ const App = () => {
             path="/portfolio"
           >
             <Portfolio />
+          </Route>
+          <Route
+            path="*"
+          >
+            <NoMatch />
           </Route>
         </Switch>
       </AnimatePresence>

@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+@import 'src/styles/mixins';
+
+.noMatch{
+  width: 50%;
+  height: 60vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__error{
+    margin: auto;
+    font-size: 3em;
+    color: vars.$elementsColor;
+    line-height: 1.5em;
+
+    @include very-small{
+      font-size: 1.7em;
+    }
+
+    @include small-only{
+      font-size: 1.8em;
+    }
+  }
+}
