@@ -23,6 +23,12 @@
       width: 40px;
       margin-top: 1rem;
       margin-right: 1rem;
+      transform: rotate(0);
+      transition: 0.2s;
+
+      &__switch{
+        transform: rotate(90deg);
+      }
     }
   }
 

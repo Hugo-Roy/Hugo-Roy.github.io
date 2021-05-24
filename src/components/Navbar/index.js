@@ -9,11 +9,9 @@ import classNames from 'classnames';
 
 const Navbar = ({ clicked, setClicked }) => {
   const cssClass = classNames('header__nav', { header__nav__open: clicked });
+  const hamburgerToggleClass = classNames('header__toggle__hamburger', { header__toggle__hamburger__switch: clicked});
   const hamb = useRef();
-  const rotate = (clicked ? '180deg' : '90deg');
   const switchNav = () => {
-    hamb.current.style.rotate = rotate;
-    hamb.current.style.transition = '0.2s';
     setClicked((clicked) => !clicked);
   };
 
@@ -24,7 +22,7 @@ const Navbar = ({ clicked, setClicked }) => {
           ref={hamb}
           src={hamburger}
           alt="hamburger menu"
-          className="header__toggle__hamburger"
+          className={hamburgerToggleClass}
           onClick={switchNav}
         />
       </div>
